@@ -20,7 +20,7 @@ import json
 
 plotly.offline.init_notebook_mode(connected=True)
 
-coal_data = pd.read_csv('New Coal Plants by Country (MW)_____________.csv')
+coal_data = pd.read_csv('https://raw.githubusercontent.com/pmshea/coal_data/master/New%20Coal%20Plants%20by%20Country%20(MW)_____________.csv')
 
 
 # In[3]:
@@ -118,7 +118,7 @@ for country in coal_data['Country']:
     
 split_countries = pd.DataFrame(list_of_country_tables)
 
-countries_continents = pd.read_csv('Countries_Continents.csv')
+countries_continents = pd.read_csv('https://raw.githubusercontent.com/pmshea/coal_data/master/Countries_Continents.csv')
 
 countries_continents_coal = pd.merge(
     countries_continents, 
@@ -147,7 +147,7 @@ print(countries_continents_coal.dtypes)
 
 #Preparing GEM data -- adding GDP data
 
-GDP_data = pd.read_csv('gdppercapita_us_inflation_adjusted.csv')
+GDP_data = pd.read_csv('https://raw.githubusercontent.com/pmshea/coal_data/master/gdppercapita_us_inflation_adjusted.csv')
 
 list_final_2 = []
 for country in GDP_data['country']:
@@ -177,7 +177,7 @@ Coal_GDP = pd.merge(
 
 #Preparing GEM data -- adding population data
 
-pop_data = pd.read_csv('population_total (1).csv')
+pop_data = pd.read_csv('https://raw.githubusercontent.com/pmshea/coal_data/master/population_total%20(1).csv')
 
 list_final_3 = []
 for country in pop_data['country']:
