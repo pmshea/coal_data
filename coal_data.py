@@ -407,7 +407,7 @@ area_graph.update_layout(
     )
 )
 
-app.layout = html.Div([
+application.layout = html.Div([
     
     html.Div(
         dcc.Graph(id='g1', figure=area_graph),
