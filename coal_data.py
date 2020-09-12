@@ -421,8 +421,7 @@ application.layout = html.Div([
 ], className='row')
 
 if __name__ == '__main__':
-    application.debug = True
-    application.run()
+    application.run_server()
 
 
 # In[ ]:
