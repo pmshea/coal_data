@@ -365,7 +365,7 @@ fig.show()
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+application = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 fig.update_layout(
     autosize=False,
@@ -419,7 +419,8 @@ app.layout = html.Div([
 ], className='row')
 
 if __name__ == '__main__':
-    app.run_server(use_reloader=False)
+    application.debug = True
+    application.run()
 
 
 # In[ ]:
