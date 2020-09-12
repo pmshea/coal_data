@@ -419,7 +419,7 @@ app.layout = html.Div([
 ], className='row')
 
 if __name__ == '__main__':
-    app.run_server(use_reloader=False, port=3027)
+    app.run_server(use_reloader=False)
 
 
 # In[ ]:
