@@ -407,28 +407,6 @@ area_graph.update_layout(
 
 app.layout = html.Div([
     
-    html.H1(
-        html.H3('Global New Coal Data', 
-        style={'textAlign': 'left', 
-               'color': 'white', 
-               'font': 'ProximaNova',
-               'font-weight': 'bold',
-               'letter-spacing': '1px',
-               'margin-left': '20px'
-              }
-        ),
-    style={'backgroundColor': '#ff5733',
-           'margin-left': '0px', 
-           'margin-right': '0px',
-           'margin-top': '0px', 
-           'margin-bottom': '0px'
-           'padding-left': '0px',
-           'padding-right': '0px',
-           'padding-top': '0px',
-           'padding-bottom': '0px'
-          }
-    ),
-    
     html.Div(
         dcc.Graph(id='g1', figure=area_graph),
         className='four columns'
