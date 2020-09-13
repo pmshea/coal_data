@@ -18,8 +18,6 @@ from dash.dependencies import Input, Output
 
 import json
 
-plotly.offline.init_notebook_mode(connected=True)
-
 coal_data = pd.read_csv('https://raw.githubusercontent.com/pmshea/coal_data/master/New%20Coal%20Plants%20by%20Country%20(MW)_____________.csv')
 
 
