@@ -375,7 +375,7 @@ area_graph.update_layout(
     font=dict(family="Arial, monospace"),
 )
 
-application.layout = html.Div([
+app.layout = html.Div([
     
     html.Iframe(src="https://pmshea.github.io/", 
                style={
