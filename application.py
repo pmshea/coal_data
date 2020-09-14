@@ -363,39 +363,29 @@ application = app.server
 
 fig.update_layout(
     autosize=False,
-    width=875,
-    height=500,
+    width=900,
+    height=650,
     font=dict(family="Arial, monospace"),
     margin=dict(
         l=100,
         r=10,
         b=20,
-        t=30,
-        pad=4
+        t=150,
+        pad=1
     )
 )
 
-fig.add_layout_image(
-    dict(
-        source="endcoal-logo_real.png",
-        xref="paper", yref="paper",
-        x=1, y=1.05,
-        sizex=0.2, sizey=0.2,
-        xanchor="right", yanchor="bottom"
-    )
-)
-    
 area_graph.update_layout(
     autosize=False,
     width=600,
-    height=500,
+    height=650,
     font=dict(family="Arial, monospace"),
     margin=dict(
         l=150,
         r=50,
         b=20,
-        t=30,
-        pad=4
+        t=150,
+        pad=1
     )
 )
 
