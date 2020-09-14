@@ -99,8 +99,6 @@ area_graph.add_trace(go.Scatter(
     stackgroup='one'
 ))
 
-area_graph.show()
-
 
 # In[5]:
 
@@ -208,8 +206,6 @@ Grouped_Coal_GDP_Pop = Coal_GDP_Pop.groupby(['CONTINENT', 'Year'], as_index=Fals
 Grouped_Coal_GDP_Pop['MW_coal'] = Grouped_Coal_GDP_Pop['MW_coal'].astype(int)
 
 print(Grouped_Coal_GDP_Pop.head())
-
-print(Coal_GDP_Pop[Coal_GDP_Pop['CONTINENT'] == 'Antarctica'])
 
 
 # In[8]:
@@ -352,8 +348,6 @@ for year in columns:
 fig_dict["layout"]["sliders"] = [sliders_dict]
 
 fig = go.Figure(fig_dict)
-
-fig.show()
 
 
 # In[ ]:
