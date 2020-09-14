@@ -389,7 +389,7 @@ area_graph.update_layout(
     autosize=False,
     width=600,
     height=500,
-    font=dict(family="ProximaNova, monospace"),
+    font=dict(family="Arial, monospace"),
     margin=dict(
         l=50,
         r=50,
