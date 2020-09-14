@@ -366,41 +366,46 @@ fig.update_layout(
     width=900,
     height=650,
     font=dict(family="Arial, monospace"),
-    margin=dict(
-        l=100,
-        r=10,
-        b=20,
-        t=150,
-        pad=1
-    )
 )
-
+    
 area_graph.update_layout(
     autosize=False,
     width=600,
     height=650,
     font=dict(family="Arial, monospace"),
-    margin=dict(
-        l=150,
-        r=50,
-        b=20,
-        t=150,
-        pad=1
-    )
 )
 
-app.layout = html.Div([
+application.layout = html.Div([
     
-    html.Div(
-        dcc.Graph(id='g1', figure=area_graph),
-        className='four columns'
-    ),
+    html.Iframe(src="https://pmshea.github.io/", 
+               style={
+                  "height": "65px",
+                  "width": "100%",
+                  "border": "0"
+               }),
     
-    html.Div(
-        dcc.Graph(id='g2', figure=fig),
-        className='four columns'
-    )
-], className='row')
+    html.Div([
+        dcc.Graph(id='g1', figure=area_graph, 
+                 style={
+                    "height": "650px",
+                    "width": "600px",
+                    "float": "left",
+                    'display': 'inline',
+                    'padding': '0px',
+                    'margin': '0px'
+                }),
+        dcc.Graph(id='g2', figure=fig,
+                 style={
+                    "height": "900px",
+                    "width": "650px",
+                    "float": "left",
+                    'display': 'inline',
+                    'padding': '0px',
+                    'margin': '0px'
+                })
+    ], style={"height" : "700px", "width" : "1500"})
+    
+])
 
 if __name__ == '__main__':
     app.run_server(debug=True, use_reloader=True)
