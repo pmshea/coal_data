@@ -357,9 +357,9 @@ fig = go.Figure(fig_dict)
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
-application = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
-server = application.server
+application = app.server
 
 fig.update_layout(
     autosize=False,
@@ -399,7 +399,7 @@ area_graph.update_layout(
     )
 )
 
-application.layout = html.Div([
+app.layout = html.Div([
     
     html.Div(
         dcc.Graph(id='g1', figure=area_graph),
@@ -413,7 +413,7 @@ application.layout = html.Div([
 ], className='row')
 
 if __name__ == '__main__':
-    application.run_server(port=8000, host='0.0.0.0')
+    app.run_server(port=8000, host='0.0.0.0')
 
 
 # In[ ]:
